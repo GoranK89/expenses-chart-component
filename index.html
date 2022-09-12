@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="script.js"></script>
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="balance-top-container">
+      <div class="balance-top-box">
+        <p>My balance</p>
+        <h2>$921.48</h2>
+      </div>
+      <img
+        src="images/logo.svg"
+        alt="balance bar charts logo"
+        class="img-logo"
+      />
+    </section>
+    <section class="bar-charts-container">
+      <h1>Spending - Last 7 days</h1>
+      <div class="weekday-columns">
+        <div class="column">
+          <div class="column-draw"></div>
+          <p class="amount amount-hiden">0</p>
+        </div>
+        <div class="column">
+          <div class="column-draw"></div>
+          <p class="amount amount-hiden">0</p>
+        </div>
+        <div class="column">
+          <div class="column-draw"></div>
+          <p class="amount amount-hiden">0</p>
+        </div>
+        <div class="column">
+          <div class="column-draw"></div>
+          <p class="amount amount-hiden">0</p>
+        </div>
+        <div class="column">
+          <div class="column-draw"></div>
+          <p class="amount amount-hiden">0</p>
+        </div>
+        <div class="column">
+          <div class="column-draw"></div>
+          <p class="amount amount-hiden">0</p>
+        </div>
+        <div class="column">
+          <div class="column-draw"></div>
+          <p class="amount amount-hiden">0</p>
+        </div>
+      </div>
+
+      <div class="total-bottom-container">
+        <div class="total-bottom-box">
+          <p>Total this month</p>
+          <h2 class="total-month">$478.33</h2>
+        </div>
+        <div class="percentage-change-box">
+          <h2 class="last-month-change">+2.4%</h2>
+          <p>from last month</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/GoranK89">Goran Kolar</a>.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM 
+
+FONT Sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+
+- Line heights:
+
+-Letter spacing
+
+
+--- 02 COLORS
+
+- Primary:
+- Tints: 
+- Shades: 
+- Accents:
+- Greys:
+
+--- 05 SHADOWS
+
+--- 06 BORDER-RADIUS
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  font-size: 1.8rem;
+}
+
+/* Common layouts for containers */
+.balance-top-container,
+.bar-charts-container {
+  max-width: 50rem;
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
+
+.balance-top-container,
+.total-bottom-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance-top-box,
+.total-bottom-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* colors in common */
+h1,
+.total-bottom-box h2,
+.percentage-change-box h2 {
+  color: var(--dark-brown);
+}
+
+.weekday-columns,
+.total-bottom-box p,
+.percentage-change-box p {
+  color: var(--medium-brown);
+}
+/***********************************/
+/* MY BALANCE SECTION */
+/***********************************/
+
+.balance-top-container {
+  background-color: var(--soft-red);
+  margin: 15rem auto 3rem auto; /*center the container*/
+}
+
+.balance-top-box {
+  color: var(--cream);
+}
+
+.balance-top-box h2 {
+  color: var(--very-pale-orange);
+}
+
+/***********************************/
+/* BAR CHARTS CONTAINER */
+/***********************************/
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.bar-charts-container {
+  background-color: var(--very-pale-orange);
+  margin: 0 auto 3rem auto;
+}
+
+.weekday-columns {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--cream);
+}
+
+/***********************************/
+/* TOTAL CONTAINER */
+/***********************************/
+
+.total-bottom-box h2 {
+  font-size: 3.4rem;
+}
+
+.percentage-change-box {
+  align-self: end;
+}
+
+.percentage-change-box h2 {
+  font-size: 2rem;
+}
+
+/***********************************/
+/* DRAW COLUMNS */
+/***********************************/
+.column {
+  display: flex;
+  /* flex reverse so the columns expand UP and day names remain at the bottom */
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.column-draw {
+  /* height is drawn in JS!*/
+  width: 45px;
+  border-radius: 5px;
+  background-color: var(--soft-red);
+}
+
+.column-draw:hover,
+.column-draw:active {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.column-draw-active {
+  background-color: var(--cyan);
+}
+
+/* the amount appearing when hovering columns*/
+.amount {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: var(--dark-brown);
+  color: var(--very-pale-orange);
+}
+
+.amount-hiden {
+  visibility: hidden;
+}
